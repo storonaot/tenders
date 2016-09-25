@@ -1,11 +1,15 @@
-include ./includes/head
-.x-wrapper
-  .x-wrapper__inner
-    include ./includes/logo
-    include ./includes/settings
-    include ./includes/step_1
-    include ./includes/footer
-  
-  
-  
-  
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title Thenders
+    link(href="./3rd-party/jquery/jquery-ui-1.8.min.css" rel="stylesheet")
+    link(href="./3rd-party/datetimepicker/jquery.datetimepicker.min.css" rel="stylesheet")
+    link(rel="stylesheet" href="./styles/main.css" type="text/css")
+  body
+    .x-wrapper
+      .x-wrapper__inner
+        include ./includes/logo
+        include ./includes/settings
+        include ./includes/step_1
+        include ./includes/footer

@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title Thenders
+    link(href="./3rd-party/jquery/jquery-ui-1.8.min.css" rel="stylesheet")
+    link(href="./3rd-party/datetimepicker/jquery.datetimepicker.min.css" rel="stylesheet")
+    link(rel="stylesheet" href="./styles/main.css" type="text/css")
+  body
+    .x-wrapper
+      .x-wrapper__inner
+        include ./includes/logo
+        include ./includes/settings
+        .x-step
+          .x-chart.x-chart--wide
+            h2.x-chart__title.h-margin-bottom Распределение подходящих тендеров, открытых компанией ОАО Новокуйбышевский НПЗ за период с 01.01.2016 по 20.08.2016
+            table.x-table(align="center")
+              tr
+                td(style="width: 40%; vertical-align: middle; padding-right: 20px;")
+                  #table_div.table_div
+                    //- сюда генерируются данные из js
+                td(style="width: 60%; vertical-align: middle;")
+                  #bubble_div.bubble_div
+                    //- сюда генерируются данные из js
+            .x-lots
+              h2.x-lots__title Лоты тендера № 135677 “Закупка крепежных изделий”
+              div.x-lots__wrapper 
+                div.x-lots__block.x-lots__block--small
+                  ul.x-lots__list
+                    li.x-lots__item.is-active Шпилька ГОСТ 9065-75
+                    li.x-lots__item.is-active Гайка М12
+                    li.x-lots__item Втулка РК-75 НГ
+                div.x-lots__block.x-lots__block--big
+                  div.x-lots__part
+                  div.x-lots__block.x-lots__block--big Позиций совпадает с продукцией вашей компании
+                  
+                  //- div.set-size.charts-container
+                  //-   div.pie-wrapper.progress-30"
+                  //-     span.label 30
+                  //-       span.smaller %
+                  //-     div.pie
+                  //-     div.left-side.half-circle
+                  //-     div.right-side.half-circle
+            
+          .x-chart.x-chart--wide
+            h2.x-chart__title.h-margin-bottom Распредление отобранных тендеров между организаторами 20.08.2016
+            
+                  
+        .x-footer
+          .x-logo
+    script(src="./3rd-party/jquery/jquery-3.1.0.min.js")
+    script(src="./3rd-party/jquery/jquery-ui-1.8.min.js")
+    script(src="./3rd-party/datetimepicker/jquery.datetimepicker.full.js")
+    script(src="./3rd-party/jqueryvalidate/jquery.validate.js")
+    script(src="./3rd-party/jquery-circle-progress/circle-progress.js")
+    script(type="text/javascript" src="https://www.gstatic.com/charts/loader.js")
+    
+    script(src="./javascripts/main.js")

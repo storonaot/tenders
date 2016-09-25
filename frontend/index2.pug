@@ -1,0 +1,44 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title Thenders
+    link(href="./3rd-party/jquery/jquery-ui-1.8.min.css" rel="stylesheet")
+    link(href="./3rd-party/datetimepicker/jquery.datetimepicker.min.css" rel="stylesheet")
+    link(rel="stylesheet" href="./styles/main.css" type="text/css")
+  body
+    .x-wrapper
+      .x-wrapper__inner
+        include ./includes/logo
+        include ./includes/settings
+        .x-step
+          .x-chart
+            h2.x-chart__title Всего найдено 
+              span.x-chart__accent 1024 &nbsp;
+              |подходящих тендеров за период с 01.01.2016 по 20.08.2016
+            div.x-chart__wrapper
+              div#myPieChart(
+                style="width: 80%; height: 400px"
+              )
+              .x-legend
+                ul.x-legend__list
+                  //- сюда генерируются данные из js
+          .x-chart.x-chart--wide
+            h2.x-chart__title.h-margin-bottom Распределение тендеров подходящих ООО "Рога" за период с 01.01.2016 по 20.08.2016
+            table(align="center")
+              tr
+                td(style="width: 40%; vertical-align: middle; padding-right: 20px;")
+                  #table_div.table_div
+                    //- сюда генерируются данные из js
+                td(style="width: 60%; vertical-align: middle;")
+                  #bubble_div.bubble_div
+                    //- сюда генерируются данные из js
+                  
+        .x-footer
+          .x-logo
+    script(src="./3rd-party/jquery/jquery-3.1.0.min.js")
+    script(src="./3rd-party/jquery/jquery-ui-1.8.min.js")
+    script(src="./3rd-party/datetimepicker/jquery.datetimepicker.full.js")
+    script(src="./3rd-party/jqueryvalidate/jquery.validate.js")
+    script(src="./javascripts/main.js")
+    script(type="text/javascript" src="https://www.gstatic.com/charts/loader.js")

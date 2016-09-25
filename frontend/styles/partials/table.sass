@@ -1,0 +1,34 @@
+.x-
+  &table
+    margin-bottom: 30px
+    &__head
+      background-color: $grayLighten
+    &__head-cell
+      background-color: $grayLighten
+    &__row
+      &.is-active
+        background-color: rgba($blue, .5)
+      &--hover
+        background-color: rgba($blue, .5)
+        cursor: pointer
+    &__cell
+      vertical-align: middle
+
+.google-visualization-table-table
+  th, td
+    border-width: 0 2px 2px 0 !important
+    border-color: $gray !important
+    &:last-child
+      border-right: none !important
+  tr:last-child
+    td
+      border-bottom: none !important
+.google-visualization-table-tr-sel
+  background-color: $blue !important
+
+
+
+.table_div, .bubble_div
+  padding: 1px
+  border: 2px solid $gray
+  border-radius: 4px
