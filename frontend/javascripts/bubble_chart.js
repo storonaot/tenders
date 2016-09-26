@@ -78,11 +78,11 @@ function drawBubbleChart() {
   var rows = [].slice.call(document.querySelectorAll('.x-table__row'));
 
   // переход на след стр
-  rows.forEach(function(item, index) {
-    item.addEventListener('click', function() {
-      document.location.href = "./index3.html"
-    });
-  })
+  // rows.forEach(function(item, index) {
+  //   item.addEventListener('click', function() {
+  //     document.location.href = "./index3.html"
+  //   });
+  // })
 
   if (window.location.pathname === '/index3.html') {
     var rows = [].slice.call(document.querySelectorAll('.x-table__row'));
@@ -93,11 +93,32 @@ function drawBubbleChart() {
     })
   }
 
+  function checkChoice() {
+    $('#make-choice').hide()
+    $('#go-next').hide()
+
+    if (table.getSelection().length === 0) {
+      $('#make-choice').show()
+      $('#go-next').hide()
+    } else {
+      $('#make-choice').hide()
+      $('#go-next').show()
+    }
+  }
+
+  checkChoice()
+
   google.visualization.events.addListener(table, 'select', function() {
-    bubble.setSelection(table.getSelection());
+    bubble.setSelection(table.getSelection())
     var currentRowIndex = table.getSelection()
+
     // номер строки таблицы (индекс), по которой было совершено действие
-    currentRowIndex = currentRowIndex[0].row
+    if (currentRowIndex.length > 0) {
+      currentRowIndex = currentRowIndex[0].row
+    }
+
+    checkChoice()
+
   });
 
   google.visualization.events.addListener(bubble, 'select', function() {
