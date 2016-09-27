@@ -9,7 +9,7 @@ function drawPieChartTwo() {
     chartArea: {
       left: 40,
       top: 10,
-      width:'100%',
+      width:'90%',
       height:'90%',
     },
   };

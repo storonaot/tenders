@@ -51,7 +51,7 @@ function drawBubbleChart() {
     },
     colorAxis: { colors: ['yellow', 'red'], },
     legend: { position: 'none', },
-    chartArea: {left:50,top:10,width:'80%',height:'80%'},
+    chartArea: { left: 50, top: 10, width: '80%', height: '80%' },
   };
 
   var cssClassNames = {
@@ -76,13 +76,6 @@ function drawBubbleChart() {
   bubble.draw(dataForBubble, optionsBubble);
 
   var rows = [].slice.call(document.querySelectorAll('.x-table__row'));
-
-  // переход на след стр
-  // rows.forEach(function(item, index) {
-  //   item.addEventListener('click', function() {
-  //     document.location.href = "./index3.html"
-  //   });
-  // })
 
   if (window.location.pathname === '/index3.html') {
     var rows = [].slice.call(document.querySelectorAll('.x-table__row'));
